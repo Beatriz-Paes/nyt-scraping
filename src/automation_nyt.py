@@ -189,7 +189,7 @@ class AutomationNYT:
         try:
             self.logger.info("Get news data...")
             news = self.get_all_data()
-            self.files.create_workbook(path="./output/news/news.xlsx")
+            self.files.create_workbook(path="./output/output.xlsx")
             self.logger.info("Creating excel file...")
             self.files.create_worksheet("News", content=[data for data in news], header=True)
             self.files.save_workbook()
