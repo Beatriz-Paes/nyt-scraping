@@ -178,8 +178,8 @@ class AutomationNYT:
             }
             data["contains_amount_money"] = self.check_if_contains_amount_money(data.get("title"),
                                                                                 data.get("description"))
-            data["search_phrases_count"] = data.get("title").count(self.phrase) + data.get("description").count(
-                self.phrase)
+            data["search_phrases_count"] = data.get("title").lower().count(self.phrase.lower()) + data.get(
+                "description").lower().count(self.phrase.lower())
 
             news.append(data)
 
