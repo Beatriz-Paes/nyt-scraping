@@ -147,7 +147,7 @@ class AutomationNYT:
             src = img.get_attribute("src")
             filename = os.path.basename(src.split("?")[0])
 
-            with open(f"output/img/{filename}", "wb") as file:
+            with open(f"output/{filename}", "wb") as file:
                 file.write(requests.get(src).content)
             return filename
         except Exception as e:
